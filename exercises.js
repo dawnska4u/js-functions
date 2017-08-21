@@ -50,7 +50,7 @@ function add (num1, num2){
 }
 
 var sum = add(bango1, bango2); // <-- use the global variables from the beginning (#1)
-console.log(sum); // expexting 14
+console.log("2. " + sum); // expexting 14
 
 /*
  * #3
@@ -72,7 +72,7 @@ function subtract (num1, num2){
 
 var difference = subtract(bango1, bango2);
 
-console.log(difference);
+console.log("3. " +difference);
 
 
 /*
@@ -95,7 +95,7 @@ return num1 * num2;
 }
 
 var product = multiply(bango1, bango2); //add globals from #1
-console.log(product);
+console.log("4. " + product);
 
 
 /*
@@ -118,7 +118,7 @@ function divide(num1, num2){
 
 var quotient = divide(bango1, bango2); //add globals from #1
 
-console.log(quotient);
+console.log("5. " + quotient);
 
 /*
  * #6
@@ -137,7 +137,7 @@ function checkSum(x){
 }
 
 var sum = checkSum("sixty");
-console.log(sum);
+console.log("6. " + sum);
 
 
 /*
@@ -156,7 +156,7 @@ function checkDifference(x){
 }
 
 var difference = checkDifference(9302);
-console.log(difference);
+console.log("7. " + difference);
 
 
 /*
@@ -174,7 +174,7 @@ function checkProduct(){
 	return sum * product;
 }
 
-console.log(checkProduct()); // line before add a var
+console.log("8. " + checkProduct()); // line before add a var
 
 
 
@@ -192,7 +192,7 @@ function checkQuotient(){
 	return product * quotient;
 }
 
-console.log(checkQuotient());
+console.log("9. " + checkQuotient());
 
 /*
  * #10
@@ -224,7 +224,7 @@ var bango7 = 13;
 
 function addThenSubtract(num1, num2, num3){
   var sum = add(num1, num2);
-  return subtract(sum, num3);
+  return subtract("10. " + sum, num3);
 }
 
 var result = addThenSubtract(bango3, bango4, bango5);
@@ -249,7 +249,7 @@ function multiplyThenDivide(num1, num2, num3){
 	return divide(product, num3);
 }
 
-console.log(multiplyThenDivide(bango3, bango4, bango5));
+console.log("11. " + multiplyThenDivide(bango3, bango4, bango5));
 
 /*
  * #12
@@ -268,7 +268,7 @@ function createFullName(firstName, lastName){
 
 }
 var myFullName = createFullName("Dawn", "Robertson");
-console.log(myFullName);
+console.log("12. " + myFullName);
 
 
 /*
@@ -289,7 +289,7 @@ function eatFood(firstName, lastName, food){
 	createFullName (firstName, lastName) + " eats" + food + " everyday for breakfast.";
 }
 
-console.log(eatFood("Queen", "Bertha", "toads"));
+console.log("13. " + eatFood("Queen", "Bertha", "toads"));
 
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
@@ -310,11 +310,11 @@ function shoeSize (inches){
 }
 
 var cm = shoeSize(4);
-console.log(cm);
+console.log("14. " + cm);
 
 
 
-//SOLUTION FUNCTION???
+/*//SOLUTION FUNCTION???
 function shoeSize(inches){
   var cm = inches * 2.54;
   return cm;
@@ -322,7 +322,7 @@ function shoeSize(inches){
 
 var inches = 5;
 console.log(shoeSize(inches));
-console.log(shoeSize(8));
+console.log(shoeSize(8));*/
 /*
  * #15
  * Function allCaps
@@ -340,7 +340,7 @@ function allCaps(str){
 }
 
 var quote = allCaps("believe you can and you're halfway there.");
-console.log(quote);
+console.log("15. " + quote);
 
 
 /*
@@ -358,9 +358,10 @@ function oneCap(str){
 	return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-	console.log(oneCap(quote));
+var quote = "believe you can and you're halfway there.";
+	console.log("16. " + oneCap(quote));
 
-//ANSWER WE GENERATED IN CLASS
+
 
 
 
@@ -386,38 +387,26 @@ function verifyDrinkingAge(age){
 }
 
 var canDrink = verifyDrinkingAge(22);
-console.log(canDrink);
+console.log("17. " + canDrink);
 /**
  * #18
  * Function - throwParty
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
 //DID IN CLASS
-function throwParty(){
-	If (canDrink) {
-		return "Chee Hoo! We going to da party!"};
-	else{
-		return "Meh, see you at Starbucks."}
+
+function throwParty(age){
+	if(age >= 21){
+		return "Chee Hoo! We going to da party!";
+	} else {
+		return "Meh, see you at Starbucks.";
+	}
 	}
 
-	}
-
-var canParty = throwParty();
-console.log(canParty);
+var canParty = throwParty(33);
+console.log(" 18. " + canParty);
 
 
-//MY HOMEWORK ATTEMPT
-function throwParty(){
-	If canDrink() => 21 {
-		return "Chee Hoo! We going to da party!"}
-	else{
-		return "Meh, see you at Starbucks."}
-	}
-
-	}
-
-var 
-console.log();
 
 
 
